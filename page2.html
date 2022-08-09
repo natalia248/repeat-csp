@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Client-Side Progamming</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="page1.html">Page 1</a></li>
+          <li><a href="page2.html">Page 2</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="tab">
+        <button class="tablinks active" onclick="openTab(event, 'Html')">HTML</button>
+        <button class="tablinks" onclick="openTab(event, 'Css')">CSS</button>
+        <button class="tablinks" onclick="openTab(event, 'Javascript')">Javascript</button>
+      </div>
+
+      <div id="Html" class="tabcontent" style="display: block;">
+        <h3>HTML</h3>
+      </div>
+
+      <div id="Css" class="tabcontent">
+        <h3>CSS</h3>
+      </div>
+
+      <div id="Javascript" class="tabcontent">
+        <h3>Javascript</h3>
+      </div>
+    </main>
+    <script src="scripts.js"></script>
+    <script>
+
+    </script>
+  </body>
+</html>

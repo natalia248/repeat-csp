@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Client-Side Progamming</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="page1.html">Page 1</a></li>
+          <li><a href="page2.html">Page 2</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="tab">
+        <button class="tablinks active" onclick="openTab(event, 'Email')">Email</button>
+        <button class="tablinks" onclick="openTab(event, 'Apis')">APIs</button>
+        <button class="tablinks" onclick="openTab(event, 'Coffes')">Coffes</button>
+      </div>
+
+      <div id="Email" class="tabcontent" style="display: block;">
+        <h3>Email</h3>
+        <input type="email" />
+        <button type="button">Validate</button>
+      </div>
+
+      <div id="Apis" class="tabcontent">
+        <h3>APIs</h3>
+      </div>
+
+      <div id="Coffes" class="tabcontent">
+        <h3>Coffes</h3>
+      </div>
+    </main>
+    <script src="scripts.js"></script>
+    <script>
+
+    </script>
+  </body>
+</html>

@@ -4,9 +4,12 @@
     <title>Client-Side Progamming</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header>
+    <header class="header">
       <nav>
         <ul>
           <li><a href="page1.html">Page 1</a></li>
@@ -14,7 +17,7 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="container">
       <div class="tab">
         <button class="tablinks active" onclick="openTab(event, 'Email')">Email</button>
         <button class="tablinks" onclick="openTab(event, 'Apis')">APIs</button>
@@ -22,19 +25,22 @@
       </div>
 
       <div id="Email" class="tabcontent" style="display: block;">
-        <h3>Email</h3>
+        <p>Email</p>
         <input type="email" />
         <button type="button">Validate</button>
       </div>
 
       <div id="Apis" class="tabcontent">
-        <h3>APIs</h3>
+        <h2>APIs</h2>
       </div>
 
       <div id="Coffes" class="tabcontent">
-        <h3>Coffes</h3>
+        <h2>Coffes</h2>
       </div>
     </main>
+    <footer class="footer">
+        <p>Made with ❤️</p>
+      </footer>
     <script src="scripts.js"></script>
     <script>
 

@@ -1,5 +1,15 @@
+function highlightLink() {
+  const page = document.URL.split('/').pop();
+  const links = document.querySelectorAll('.header nav a');
+  links.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === page) {
+      link.classList.add('active');
+    }
+  })
+}
 function openTab(evt, tabName) {
-    var i, tabcontent, tablinks;
+  let i, tabcontent, tablinks;
     tabcontent = document.querySelectorAll(".tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
       tabcontent[i].style.display = "none";
@@ -11,3 +21,5 @@ function openTab(evt, tabName) {
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
   }
+
+  highlightLink()

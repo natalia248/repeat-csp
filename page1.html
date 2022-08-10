@@ -25,9 +25,10 @@
       </div>
 
       <div id="Email" class="tabcontent" style="display: block;">
-        <p>Email</p>
-        <input type="email" />
-        <button type="button">Validate</button>
+        <p>Type an email and click on Validate, to see if it is valid.</p>
+        <input type="email" id="email-input" />
+        <button type="button" id="validate">Validate</button>
+        <span id="result"></span>
       </div>
 
       <div id="Apis" class="tabcontent">
@@ -43,7 +44,19 @@
       </footer>
     <script src="scripts.js"></script>
     <script>
-
+      const emailRegex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/; 
+      const validateButton = document.querySelector('#validate')
+      const result = document.querySelector('#result')
+      
+      validateButton.addEventListener('click', () => {
+        const email = document.querySelector('#email-input').value
+        const isValidEmail = email.match(emailRegex)
+        if (isValidEmail) {
+          result.textContent = "Your email is valid! ✅"
+        } else {
+          result.textContent = "Invalid email. Try again. 🚫"
+        }
+      })
     </script>
   </body>
 </html>

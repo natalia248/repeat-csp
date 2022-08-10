@@ -15,7 +15,7 @@
     padding-bottom: 48px; /* footer size */
   }
   
-  a, button, p, input {
+  a, button, p, input, span {
     font-family: 'Comfortaa', cursive;
   }
   
@@ -99,11 +99,25 @@
   
   .tabcontent {
     display: none;
-    padding: 6px 12px;
+    padding: 16px;
     border: 1px solid var(--purple);
     border-top: none;
   } 
-}
+  
+  #Email p {
+    margin-bottom: 16px;
+  }
+  
+  #Email input, #Email button {
+    font-size: 1.25rem;
+    padding: 8px;
+  }
+  
+  #Email span#result {
+    display: block;
+    margin-top: 8px;
+    font-size: 1rem;
+  }
 
 .footer {
   position: fixed;

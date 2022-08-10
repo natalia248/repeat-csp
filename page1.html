@@ -19,23 +19,33 @@
     </header>
     <main class="container">
       <div class="tab">
-        <button class="tablinks active" onclick="openTab(event, 'Email')">Email</button>
-        <button class="tablinks" onclick="openTab(event, 'Apis')">APIs</button>
-        <button class="tablinks" onclick="openTab(event, 'Coffes')">Coffes</button>
+        <button class="tablinks active" onclick="openTab(event, 'email')">Email</button>
+        <button class="tablinks" onclick="openTab(event, 'apis')">APIs</button>
+        <button class="tablinks" onclick="openTab(event, 'coffes')">Coffes</button>
       </div>
 
-      <div id="Email" class="tabcontent" style="display: block;">
+      <div id="email" class="tabcontent" style="display: block;">
         <p>Type an email and click on Validate, to see if it is valid.</p>
         <input type="email" id="email-input" />
         <button type="button" id="validate">Validate</button>
         <span id="result"></span>
       </div>
 
-      <div id="Apis" class="tabcontent">
-        <h2>APIs</h2>
+      <div id="apis" class="tabcontent">
+        <p>Fetching data from my github profile</p>
+        <div>
+          <img id="github_avatar_url" alt="profile" />
+          <div class="apis-info">
+            <p id="github_created_at"></p>
+            <p id="github_login"></p>
+            <p id="github_name"></p>
+            <p id="github_public_repos"></p>
+            <p id="github_followers"></p>
+          </div>
+        </div>
       </div>
 
-      <div id="Coffes" class="tabcontent">
+      <div id="coffes" class="tabcontent">
         <h2>Coffes</h2>
       </div>
     </main>

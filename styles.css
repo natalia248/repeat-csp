@@ -103,22 +103,40 @@
     border: 1px solid var(--purple);
     border-top: none;
   } 
-  
-  #Email p {
+
+  #email p {
     margin-bottom: 16px;
   }
   
-  #Email input, #Email button {
+  #email input, #email button {
     font-size: 1.25rem;
     padding: 8px;
   }
   
-  #Email span#result {
+  #email span#result {
     display: block;
     margin-top: 8px;
     font-size: 1rem;
   }
-
+  
+  #apis > p {
+    margin-bottom: 16px;
+  }
+  
+  #apis > div {
+    display: flex;
+  }
+  
+  #apis img {
+    height: 120px;
+    width: auto;
+    object-fit: cover;
+  }
+  
+  #apis .apis-info p{
+    margin-bottom: 8px;
+  }
+  
 .footer {
   position: fixed;
   bottom: 0px;

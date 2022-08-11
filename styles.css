@@ -145,62 +145,76 @@
     margin-bottom: 8px;
   }
   
-  #coffes h2 {
+  #coffee h2 {
     margin-bottom: 16px;
   }
   
-  #coffes .coffe-menu {
+  #coffee .coffee-menu {
     display: flex;
   }
   
-  #coffes .coffe-menu .coffe-menu-items {
+  #coffee .coffee-menu .coffee-menu-items {
     flex: 1;
   }
   
-  #coffes .coffe-menu .coffe-menu-items h3 {
+  #coffee .coffee-menu .coffee-menu-items h3 {
     margin: 16px 0px;
     text-decoration: underline;
   }
   
-  #coffes .coffe-menu .coffe-menu-bill {
+  #coffee .coffee-menu .coffee-menu-bill {
     border: 5px solid var(--purple);
     padding: 16px 32px;
   }
   
-  #coffes .coffe-menu .coffe-menu-bill > div {
+  #coffee .coffee-menu .coffee-menu-bill > div {
     margin: 8px 0px;
     display: flex;
     justify-content: space-between;
   }
   
-  #coffes .coffe-menu .coffe-menu-bill > div > span {
+  #coffee .coffee-menu .coffee-menu-bill > div > span {
     margin-left: 16px;
   }
   
-  #coffes .coffe-menu .coffe-menu-bill > div.total {
+  #coffee .coffee-menu .coffee-menu-bill > div.total {
     margin-top: 24px;
     font-weight: bold;
   }
   
-  #coffes ul {
+  #coffee ul {
     padding: 0px;
     list-style-type: none;
   }
   
-  #coffes li {
+  #coffee li {
     margin: 8px 0px;
     font-size: 1.15rem;
   }
   
-  #coffes li button {
+  #coffee li button {
     font-size: 1.25rem;
     width: 32px;
     height: 32px;
   }
   
-  #coffes li span {
+  #coffee li span {
     margin-left: 16px;
     font-style: italic;
+  }
+
+  container.page2 .tabcontent > img {
+    height: 150px;
+    width: auto;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 24px;
+  }
+  
+  .container.page2 .tabcontent > p {
+    line-height: 1.5rem;
+    font-size: 1rem;
   }
   
 .footer {

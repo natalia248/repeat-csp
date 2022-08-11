@@ -21,7 +21,7 @@
       <div class="tab">
         <button class="tablinks active" onclick="openTab(event, 'email')">Email</button>
         <button class="tablinks" onclick="openTab(event, 'apis')">APIs</button>
-        <button class="tablinks" onclick="openTab(event, 'coffes')">Coffes</button>
+        <button class="tablinks" onclick="openTab(event, 'coffee')">Coffee</button>
       </div>
 
       <div id="email" class="tabcontent" style="display: block;">
@@ -45,16 +45,16 @@
         </div>
       </div>
 
-      <div id="coffes" class="tabcontent">
+      <div id="coffee" class="tabcontent">
         <h2>Menu</h2>
-        <div class="coffe-menu">
+        <div class="coffee-menu">
           <div class="coffe-menu-items">
-            <h3>Coffes</h3>
+            <h3>Coffee</h3>
             <ul>
               <li>
-                <button onclick="addItem('coffes')">+</button>
-                <button onclick="removeItem('coffes')">-</button>
-                ☕ Coffe
+                <button onclick="addItem('Coffee')">+</button>
+                <button onclick="removeItem('Coffee')">-</button>
+                ☕ Coffee
                 <span>€ 2.90</span>
               </li>
             </ul>
@@ -80,9 +80,9 @@
               </li>
             </ul>
           </div>
-          <div class="coffe-menu-bill">
+          <div class="coffee-menu-bill">
             <h3>Bill</h3>
-            <div><p><span id="coffes_quantity"></span> Coffes</p><span id="coffes_value"></span></div>
+            <div><p><span id="coffee_quantity"></span> Coffee</p><span id="coffee_value"></span></div>
             <div><p><span id="ice_creams_quantity"></span> Ice Creams</p><span id="ice_creams_value"></span></div>
             <div><p><span id="donuts_quantity"></span> Donuts</p><span id="donuts_value"></span></div>
             <div><p><span id="cakes_quantity"></span> Cakes</p><span id="cakes_value"></span></div>
@@ -125,13 +125,13 @@
 
       // Coffe Shop
       const bill = {
-        'coffes': 0,
+        'coffee': 0,
         'ice_creams': 0,
         'donuts': 0,
         'cakes': 0
       }
       const billValues = {
-        'coffes': 2.9,
+        'coffee': 2.9,
         'ice_creams': 5,
         'donuts': 4.5,
         'cakes': 6
@@ -144,24 +144,6 @@
           const itemValue = Number(item[1] * billValues[item[0]])
           document.querySelector(`#${item[0]}_value`).textContent = `€ ${itemValue.toFixed(1)}`;
           total += item[1] * billValues[item[0]];
-          // switch(item[0]) {
-          //   case 'coffes' :
-          //     document.querySelector(`#${item[0]}_value`).textContent = `€ ${item[1] * 2.9.toFixed(1)}`;
-          //     total += item[1] * 2.9;
-          //     break;
-          //   case 'ice_creams' :
-          //     document.querySelector(`#${item[0]}_value`).textContent = `€ ${item[1] * 5.toFixed(1)}`;
-          //     total += item[1] * 5;
-          //     break;
-          //   case 'donuts' :
-          //     document.querySelector(`#${item[0]}_value`).textContent = `€ ${item[1] * 4.5}`;
-          //     total += item[1] * 4.5;
-          //     break;
-          //   case 'cakes' :
-          //     document.querySelector(`#${item[0]}_value`).textContent = `€ ${item[1] * 6}`;
-          //     total += item[1] * 6;
-          //     break;
-          // }
         }
         document.querySelector('#total').textContent = `€ ${total.toFixed(1)}`
       }

@@ -15,7 +15,7 @@
     padding-bottom: 48px; /* footer size */
   }
   
-  a, button, p, input, span {
+  body, a, button, li, p, input, span, h2, h3 {
     font-family: 'Comfortaa', cursive;
   }
   
@@ -64,6 +64,10 @@
   
   .container {
     padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
   .tab {
@@ -71,6 +75,8 @@
     border: 1px solid var(--purple);
     background-color: var(--white);
     display: flex;
+    max-width: 800px;
+    width: 100%;
   }
   
   .tab button {
@@ -102,7 +108,9 @@
     padding: 16px;
     border: 1px solid var(--purple);
     border-top: none;
-  } 
+    max-width: 800px;
+    width: 100%;
+}
 
   #email p {
     margin-bottom: 16px;
@@ -135,6 +143,64 @@
   
   #apis .apis-info p{
     margin-bottom: 8px;
+  }
+  
+  #coffes h2 {
+    margin-bottom: 16px;
+  }
+  
+  #coffes .coffe-menu {
+    display: flex;
+  }
+  
+  #coffes .coffe-menu .coffe-menu-items {
+    flex: 1;
+  }
+  
+  #coffes .coffe-menu .coffe-menu-items h3 {
+    margin: 16px 0px;
+    text-decoration: underline;
+  }
+  
+  #coffes .coffe-menu .coffe-menu-bill {
+    border: 5px solid var(--purple);
+    padding: 16px 32px;
+  }
+  
+  #coffes .coffe-menu .coffe-menu-bill > div {
+    margin: 8px 0px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #coffes .coffe-menu .coffe-menu-bill > div > span {
+    margin-left: 16px;
+  }
+  
+  #coffes .coffe-menu .coffe-menu-bill > div.total {
+    margin-top: 24px;
+    font-weight: bold;
+  }
+  
+  #coffes ul {
+    padding: 0px;
+    list-style-type: none;
+  }
+  
+  #coffes li {
+    margin: 8px 0px;
+    font-size: 1.15rem;
+  }
+  
+  #coffes li button {
+    font-size: 1.25rem;
+    width: 32px;
+    height: 32px;
+  }
+  
+  #coffes li span {
+    margin-left: 16px;
+    font-style: italic;
   }
   
 .footer {

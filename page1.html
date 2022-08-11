@@ -46,7 +46,50 @@
       </div>
 
       <div id="coffes" class="tabcontent">
-        <h2>Coffes</h2>
+        <h2>Menu</h2>
+        <div class="coffe-menu">
+          <div class="coffe-menu-items">
+            <h3>Coffes</h3>
+            <ul>
+              <li>
+                <button onclick="addItem('coffes')">+</button>
+                <button onclick="removeItem('coffes')">-</button>
+                ☕ Coffe
+                <span>€ 2.90</span>
+              </li>
+            </ul>
+            <h3>Desserts</h3>
+            <ul>
+              <li>
+                <button onclick="addItem('ice_creams')">+</button>
+                <button onclick="removeItem('ice_creams')">-</button>
+                🍦 Ice Cream
+                <span>€ 5.00</span>
+              </li>
+              <li>
+                <button onclick="addItem('donuts')">+</button>
+                <button onclick="removeItem('donuts')">-</button>
+                🍩 Donut
+                <span>€ 4.50</span>
+              </li>
+              <li>
+                <button onclick="addItem('cakes')">+</button>
+                <button onclick="removeItem('cakes')">-</button>
+                🍰 Cake
+                <span>€ 6.00</span>
+              </li>
+            </ul>
+          </div>
+          <div class="coffe-menu-bill">
+            <h3>Bill</h3>
+            <div><p><span id="coffes_quantity"></span> Coffes</p><span id="coffes_value"></span></div>
+            <div><p><span id="ice_creams_quantity"></span> Ice Creams</p><span id="ice_creams_value"></span></div>
+            <div><p><span id="donuts_quantity"></span> Donuts</p><span id="donuts_value"></span></div>
+            <div><p><span id="cakes_quantity"></span> Cakes</p><span id="cakes_value"></span></div>
+
+            <div class="total">Total: <span id="total"></span></div>
+          </div>
+        </div>
       </div>
     </main>
     <footer class="footer">
@@ -54,10 +97,10 @@
       </footer>
     <script src="scripts.js"></script>
     <script>
+          // Email Regex Validation
       const emailRegex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/; 
       const validateButton = document.querySelector('#validate')
       const result = document.querySelector('#result')
-      
       validateButton.addEventListener('click', () => {
         const email = document.querySelector('#email-input').value
         const isValidEmail = email.match(emailRegex)
@@ -67,6 +110,75 @@
           result.textContent = "Invalid email. Try again. 🚫"
         }
       })
+      // Fetching API
+      const url = 'https://api.github.com/users/natalia248'
+      fetch(url).then(response => response.json()).then(data => {
+        console.log(data)
+        document.querySelector('#github_avatar_url').setAttribute('src', data.avatar_url)
+        document.querySelector('#github_created_at').textContent = 'Profile created at: ' + new Date(data.created_at).toLocaleDateString()
+        document.querySelector('#github_login').textContent = 'Profile Login: ' + data.login
+        document.querySelector('#github_name').textContent = 'Profile Name: ' + data.name
+        document.querySelector('#github_public_repos').textContent = 'Public Repositories: ' + data.public_repos
+        document.querySelector('#github_followers').textContent = 'Followers: ' + data.followers
+      })
+      .catch(error => console.error(error))
+
+      // Coffe Shop
+      const bill = {
+        'coffes': 0,
+        'ice_creams': 0,
+        'donuts': 0,
+        'cakes': 0
+      }
+      const billValues = {
+        'coffes': 2.9,
+        'ice_creams': 5,
+        'donuts': 4.5,
+        'cakes': 6
+      }
+
+      function renderBill() {
+        let total = 0;
+        for(const item of Object.entries(bill)) {
+          document.querySelector(`#${item[0]}_quantity`).textContent = item[1];
+          const itemValue = Number(item[1] * billValues[item[0]])
+          document.querySelector(`#${item[0]}_value`).textContent = `€ ${itemValue.toFixed(1)}`;
+          total += item[1] * billValues[item[0]];
+          // switch(item[0]) {
+          //   case 'coffes' :
+          //     document.querySelector(`#${item[0]}_value`).textContent = `€ ${item[1] * 2.9.toFixed(1)}`;
+          //     total += item[1] * 2.9;
+          //     break;
+          //   case 'ice_creams' :
+          //     document.querySelector(`#${item[0]}_value`).textContent = `€ ${item[1] * 5.toFixed(1)}`;
+          //     total += item[1] * 5;
+          //     break;
+          //   case 'donuts' :
+          //     document.querySelector(`#${item[0]}_value`).textContent = `€ ${item[1] * 4.5}`;
+          //     total += item[1] * 4.5;
+          //     break;
+          //   case 'cakes' :
+          //     document.querySelector(`#${item[0]}_value`).textContent = `€ ${item[1] * 6}`;
+          //     total += item[1] * 6;
+          //     break;
+          // }
+        }
+        document.querySelector('#total').textContent = `€ ${total.toFixed(1)}`
+      }
+
+      function addItem(item) {
+        bill[item] += 1;
+        renderBill()
+      }
+
+      function removeItem(item) {
+        if (bill[item] > 0) {
+          bill[item] -= 1;
+          renderBill()
+        }
+      }
+
+      renderBill()
     </script>
   </body>
 </html>

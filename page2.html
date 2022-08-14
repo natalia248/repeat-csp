@@ -4,6 +4,11 @@
     <title>Client-Side Progamming</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="styles.css" rel="stylesheet" />
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <header class="header">
@@ -23,37 +28,61 @@
 
       <div id="html" class="tabcontent" style="display: block;">
         <img src="assets/html.png" alt="html" />
-        <p>Hypertext Markup Language (HTML) is a computer language that makes up most web pages and online applications. 
-          A hypertext is text used to reference other text, while a markup language is made up of a series of markup that tells web servers what the style and structure of a document is.</p>
-        <p>HTML is not considered a programming language, as it cannot create dynamic functionality. 
-          Instead, with HTML, users can create and structure sections, paragraphs, and links using elements, tags, and attributes.</p>
+        <button class="btn btn-primary mb-4" type="button" data-bs-toggle="collapse" data-bs-target="#html-collapse" aria-expanded="false" aria-controls="html-collapse">
+          Collapse Text
+        </button>
+        <div class="collapse" id="html-collapse">
+          <p id="html-text"></p>
+        </div>
       </div>
 
       <div id="css" class="tabcontent">
         <img src="assets/css.png" alt="css" />
-        <p>CSS is called the Cascading Style Sheet language and is used to style elements written in a markup language like HTML. 
-          CSS separates the content from the visual representation of the site. 
-          Think about your page decor. Using CSS it is possible to change the text and background color, font and spacing between paragraphs. 
-          You can also create tables, use layout variations, adjust images for their respective screens, and so on.</p>
-        <p>CSS was developed by the W3C (World Wide Web Consortium) in 1996 for a very simple reason. HTML was not designed to have tags that would help format the page. 
-          You should just write the markup for the site. The relationship between HTML and CSS is quite strong. 
-          Since HTML is a markup language (the foundation of a website) and CSS is style-focused (the entire aesthetic of a website), they go together.</p>
+        <button class="btn btn-primary mb-4" type="button" data-bs-toggle="collapse" data-bs-target="#css-collapse" aria-expanded="false" aria-controls="css-collapse">
+          Collapse Text
+        </button>
+        <div class="collapse" id="css-collapse">
+          <p id="css-text"></p>
+        </div>
       </div>
 
       <div id="javascript" class="tabcontent">
         <img src="assets/js.png" alt="javascript" />
-        <p>JS or JavaScript is a high-level programming language, created in the mid-1990s, more precisely in 1996 by the legendary programmer Brendan Eich who, in addition to creating JavaScript, was also one of the founders of the Mozilla Corporation.
-          He created the language while still working at Netscape Communications Corporation, originally created to work in the Netscape Navigator browser, its objective was to facilitate processes within web pages, making the programming of animations and alerts much simpler.</p>
-        <p>Shortly after, about 1 year after its launch, Microsoft started to accept this language in its browser at the time, which was one of the great drivers to consolidate what is Javascript as one of the main programming languages ​​today. .
-          Since then, JScript has undergone several different functions and applications, becoming more versatile and complete over time. Today, for example, it is already possible to use Javascript to create Desktop and Mobile applications, not just web-based applications and browsers.</p>
+        <button class="btn btn-primary mb-4" type="button" data-bs-toggle="collapse" data-bs-target="#js-collapse" aria-expanded="false" aria-controls="js-collapse">
+          Collapse Text
+        </button>
+        <div class="collapse" id="js-collapse">
+          <p id="js-text"></p>
+        </div>
       </div>
     </main>
     <footer class="footer">
       <p>Made with ❤️</p>
     </footer>
     <script src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <script>
+      const htmlOptions = {
+        strings: ['Hypertext Markup Language (HTML) is a computer language that makes up most web pages and online applications. A hypertext is text used to reference other text, while a markup language is made up of a series of markup that tells web servers what the style and structure of a document is. HTML is not considered a programming language, as it cannot create dynamic functionality. Instead, with HTML, users can create and structure sections, paragraphs, and links using elements, tags, and attributes.'],
+        typeSpeed: 50
+      };
 
+      const htmlTyped = new Typed('#html-text', htmlOptions);
+
+      const cssOptions = {
+        strings: ['CSS is called the Cascading Style Sheet language and is used to style elements written in a markup language like HTML. CSS separates the content from the visual representation of the site. Think about your page decor. Using CSS it is possible to change the text and background color, font and spacing between paragraphs. You can also create tables, use layout variations, adjust images for their respective screens, and so on. CSS was developed by the W3C (World Wide Web Consortium) in 1996 for a very simple reason. HTML was not designed to have tags that would help format the page. You should just write the markup for the site. The relationship between HTML and CSS is quite strong. Since HTML is a markup language (the foundation of a website) and CSS is style-focused (the entire aesthetic of a website), they go together.'],
+        typeSpeed: 50
+      };
+
+      const cssTyped = new Typed('#css-text', cssOptions);
+
+      const jsOptions = {
+        strings: ['JS or JavaScript is a high-level programming language, created in the mid-1990s, more precisely in 1996 by the legendary programmer Brendan Eich who, in addition to creating JavaScript, was also one of the founders of the Mozilla Corporation. He created the language while still working at Netscape Communications Corporation, originally created to work in the Netscape Navigator browser, its objective was to facilitate processes within web pages, making the programming of animations and alerts much simpler. Shortly after, about 1 year after its launch, Microsoft started to accept this language in its browser at the time, which was one of the great drivers to consolidate what is Javascript as one of the main programming languages ​​today. Since then, JScript has undergone several different functions and applications, becoming more versatile and complete over time. Today, for example, it is already possible to use Javascript to create Desktop and Mobile applications, not just web-based applications and browsers.'],
+        typeSpeed: 50
+      };
+
+      const jsTyped = new Typed('#js-text', jsOptions);
     </script>
   </body>
 </html>

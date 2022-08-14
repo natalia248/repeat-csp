@@ -21,16 +21,16 @@
       <div class="tab">
         <button class="tablinks active" onclick="openTab(event, 'email')">Email</button>
         <button class="tablinks" onclick="openTab(event, 'apis')">APIs</button>
-        <button class="tablinks" onclick="openTab(event, 'coffee')">Coffee</button>
+        <button class="tablinks" onclick="openTab(event, 'coffes')">Coffes</button>
       </div>
-
+      
       <div id="email" class="tabcontent" style="display: block;">
         <p>Type an email and click on Validate, to see if it is valid.</p>
         <input type="email" id="email-input" />
         <button type="button" id="validate">Validate</button>
         <span id="result"></span>
       </div>
-
+      
       <div id="apis" class="tabcontent">
         <p>Fetching data from my github profile</p>
         <div>
@@ -44,17 +44,17 @@
           </div>
         </div>
       </div>
-
-      <div id="coffee" class="tabcontent">
+      
+      <div id="coffes" class="tabcontent">
         <h2>Menu</h2>
-        <div class="coffee-menu">
+        <div class="coffe-menu">
           <div class="coffe-menu-items">
-            <h3>Coffee</h3>
+            <h3>Coffes</h3>
             <ul>
               <li>
-                <button onclick="addItem('Coffee')">+</button>
-                <button onclick="removeItem('Coffee')">-</button>
-                ☕ Coffee
+                <button onclick="addItem('coffes')">+</button>
+                <button onclick="removeItem('coffes')">-</button>
+                ☕ Coffe
                 <span>€ 2.90</span>
               </li>
             </ul>
@@ -80,9 +80,9 @@
               </li>
             </ul>
           </div>
-          <div class="coffee-menu-bill">
+          <div class="coffe-menu-bill">
             <h3>Bill</h3>
-            <div><p><span id="coffee_quantity"></span> Coffee</p><span id="coffee_value"></span></div>
+            <div><p><span id="coffes_quantity"></span> Coffes</p><span id="coffes_value"></span></div>
             <div><p><span id="ice_creams_quantity"></span> Ice Creams</p><span id="ice_creams_value"></span></div>
             <div><p><span id="donuts_quantity"></span> Donuts</p><span id="donuts_value"></span></div>
             <div><p><span id="cakes_quantity"></span> Cakes</p><span id="cakes_value"></span></div>
@@ -93,14 +93,15 @@
       </div>
     </main>
     <footer class="footer">
-        <p>Made with ❤️</p>
-      </footer>
+      <p>Made with ❤️</p>
+    </footer>
     <script src="scripts.js"></script>
     <script>
-          // Email Regex Validation
+      // Email Regex Validation
       const emailRegex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/; 
       const validateButton = document.querySelector('#validate')
       const result = document.querySelector('#result')
+
       validateButton.addEventListener('click', () => {
         const email = document.querySelector('#email-input').value
         const isValidEmail = email.match(emailRegex)
@@ -110,10 +111,10 @@
           result.textContent = "Invalid email. Try again. 🚫"
         }
       })
+
       // Fetching API
       const url = 'https://api.github.com/users/natalia248'
       fetch(url).then(response => response.json()).then(data => {
-        console.log(data)
         document.querySelector('#github_avatar_url').setAttribute('src', data.avatar_url)
         document.querySelector('#github_created_at').textContent = 'Profile created at: ' + new Date(data.created_at).toLocaleDateString()
         document.querySelector('#github_login').textContent = 'Profile Login: ' + data.login
@@ -125,13 +126,13 @@
 
       // Coffe Shop
       const bill = {
-        'coffee': 0,
+        'coffes': 0,
         'ice_creams': 0,
         'donuts': 0,
         'cakes': 0
       }
       const billValues = {
-        'coffee': 2.9,
+        'coffes': 2.9,
         'ice_creams': 5,
         'donuts': 4.5,
         'cakes': 6

@@ -1,222 +1,222 @@
 :root {
-    --purple: #d047ed;
-    --white: #fafafa;
-    --gray: #ccc;
-    --lightGray: #ddd;
-  }
-  
-  * {
-    box-sizing: border-box;
-    margin: 0px;
-  }
-  
-  body {
-    font-size: 14px;
-    padding-bottom: 48px; /* footer size */
-  }
-  
-  body, a, button, li, p, input, span, h2, h3 {
-    font-family: 'Comfortaa', cursive;
-  }
-  
-  input {
-    outline: 0px;
-  }
-  
-  button {
-    background-color: var(--white);
-    color: var(--purple);
-    border: 1px solid var(--purple);
-    cursor: pointer;
-  }
-  
-  .header {
-    background-color: var(--purple);
-    height: 64px;
-    width: 100%;
-  }
-  
-  .header nav {
-    height: 100%;
-    display: flex;
-    align-items: center;
-  }
-  
-  .header nav ul {
-    list-style-type: none;
-    display: flex;
-  }
-  
-  .header nav ul li {
-    margin: 0px 16px;
-  }
-  
-  .header nav a {
-    color: var(--white);
-    font-weight: bold;
-    font-size: 1.25rem;
-    text-decoration: none;
-  }
-  
-  .header nav a.active {
-    text-decoration: underline;
-  }
-  
-  .container {
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .tab {
-    overflow: hidden;
-    border: 1px solid var(--purple);
-    background-color: var(--white);
-    display: flex;
-    max-width: 800px;
-    width: 100%;
-  }
-  
-  .tab button {
-    background-color: inherit;
-    flex: 1;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 1.125rem;
-    border-left: 1px solid var(--purple);
-    border-right: 1px solid var(--purple);
-  }
-  
-  .tab button:hover {
-    background-color: var(--purple);
-    color: var(--white);
-    opacity: 0.8;
-  }
-  
-  .tab button.active {
-    background-color: var(--purple);
-    color: var(--white);
-  }
-  
-  .tabcontent {
-    display: none;
-    padding: 16px;
-    border: 1px solid var(--purple);
-    border-top: none;
-    max-width: 800px;
-    width: 100%;
+  --purple: #d047ed;
+  --white: #fafafa;
+  --gray: #ccc;
+  --lightGray: #ddd;
 }
 
-  #email p {
-    margin-bottom: 16px;
-  }
-  
-  #email input, #email button {
-    font-size: 1.25rem;
-    padding: 8px;
-  }
-  
-  #email span#result {
-    display: block;
-    margin-top: 8px;
-    font-size: 1rem;
-  }
-  
-  #apis > p {
-    margin-bottom: 16px;
-  }
-  
-  #apis > div {
-    display: flex;
-  }
-  
-  #apis img {
-    height: 120px;
-    width: auto;
-    object-fit: cover;
-  }
-  
-  #apis .apis-info p{
-    margin-bottom: 8px;
-  }
-  
-  #coffee h2 {
-    margin-bottom: 16px;
-  }
-  
-  #coffee .coffee-menu {
-    display: flex;
-  }
-  
-  #coffee .coffee-menu .coffee-menu-items {
-    flex: 1;
-  }
-  
-  #coffee .coffee-menu .coffee-menu-items h3 {
-    margin: 16px 0px;
-    text-decoration: underline;
-  }
-  
-  #coffee .coffee-menu .coffee-menu-bill {
-    border: 5px solid var(--purple);
-    padding: 16px 32px;
-  }
-  
-  #coffee .coffee-menu .coffee-menu-bill > div {
-    margin: 8px 0px;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  #coffee .coffee-menu .coffee-menu-bill > div > span {
-    margin-left: 16px;
-  }
-  
-  #coffee .coffee-menu .coffee-menu-bill > div.total {
-    margin-top: 24px;
-    font-weight: bold;
-  }
-  
-  #coffee ul {
-    padding: 0px;
-    list-style-type: none;
-  }
-  
-  #coffee li {
-    margin: 8px 0px;
-    font-size: 1.15rem;
-  }
-  
-  #coffee li button {
-    font-size: 1.25rem;
-    width: 32px;
-    height: 32px;
-  }
-  
-  #coffee li span {
-    margin-left: 16px;
-    font-style: italic;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
 
-  container.page2 .tabcontent > img {
-    height: 150px;
-    width: auto;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 24px;
-  }
-  
-  .container.page2 .tabcontent > p {
-    line-height: 1.5rem;
-    font-size: 1rem;
-  }
-  
+body {
+  font-size: 14px;
+  padding-bottom: 48px; /* footer size */
+}
+
+body, a, button, li, p, input, span, h2, h3 {
+  font-family: 'Comfortaa', cursive;
+}
+
+input {
+  outline: 0px;
+}
+
+button {
+  background-color: var(--white);
+  color: var(--purple);
+  border: 1px solid var(--purple);
+  cursor: pointer;
+}
+
+.header {
+  background-color: var(--purple);
+  height: 64px;
+  width: 100%;
+}
+
+.header nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.header nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.header nav ul li {
+  margin: 0px 16px;
+}
+
+.header nav a {
+  color: var(--white);
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+.header nav a.active {
+  text-decoration: underline;
+}
+
+.container {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tab {
+  overflow: hidden;
+  border: 1px solid var(--purple);
+  background-color: var(--white);
+  display: flex;
+  max-width: 800px;
+  width: 100%;
+}
+
+.tab button {
+  flex: 1;
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 1.125rem;
+  border-left: 1px solid var(--purple);
+  border-right: 1px solid var(--purple);
+}
+
+.tab button:hover {
+  background-color: var(--purple);
+  color: var(--white);
+  opacity: 0.8;
+}
+
+.tab button.active {
+  background-color: var(--purple);
+  color: var(--white);
+}
+
+.tabcontent {
+  display: none;
+  padding: 16px;
+  border: 1px solid var(--purple);
+  border-top: none;
+  max-width: 800px;
+  width: 100%;
+}
+
+#email p {
+  margin-bottom: 16px;
+}
+
+#email input, #email button {
+  font-size: 1.25rem;
+  padding: 8px;
+}
+
+#email span#result {
+  display: block;
+  margin-top: 8px;
+  font-size: 1rem;
+}
+
+#apis > p {
+  margin-bottom: 16px;
+}
+
+#apis > div {
+  display: flex;
+}
+
+#apis img {
+  height: 120px;
+  width: auto;
+  object-fit: cover;
+}
+
+#apis .apis-info p{
+  margin-bottom: 8px;
+}
+
+#coffes h2 {
+  margin-bottom: 16px;
+}
+
+#coffes .coffe-menu {
+  display: flex;
+}
+
+#coffes .coffe-menu .coffe-menu-items {
+  flex: 1;
+}
+
+#coffes .coffe-menu .coffe-menu-items h3 {
+  margin: 16px 0px;
+  text-decoration: underline;
+}
+
+#coffes .coffe-menu .coffe-menu-bill {
+  border: 5px solid var(--purple);
+  padding: 16px 32px;
+}
+
+#coffes .coffe-menu .coffe-menu-bill > div {
+  margin: 8px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#coffes .coffe-menu .coffe-menu-bill > div > span {
+  margin-left: 16px;
+}
+
+#coffes .coffe-menu .coffe-menu-bill > div.total {
+  margin-top: 24px;
+  font-weight: bold;
+}
+
+#coffes ul {
+  padding: 0px;
+  list-style-type: none;
+}
+
+#coffes li {
+  margin: 8px 0px;
+  font-size: 1.15rem;
+}
+
+#coffes li button {
+  font-size: 1.25rem;
+  width: 32px;
+  height: 32px;
+}
+
+#coffes li span {
+  margin-left: 16px;
+  font-style: italic;
+}
+
+.container.page2 .tabcontent > img {
+  height: 150px;
+  width: auto;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+
+.container.page2 .tabcontent > p {
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+
 .footer {
   position: fixed;
   bottom: 0px;
